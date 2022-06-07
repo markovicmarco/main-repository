@@ -36,8 +36,8 @@ export const COOKIE = 'user-id';
 export const LEGAL_URL = '/legal';
 export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
-export const CODE_OF_CONDUCT =
-  'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
+export const SMART_CONTRACT =
+  'https://etherscan.io/tx/0xa9d1e20bbb31e69982e5c74e09cb1cb60ef9aafa8c9aca7df4bdffe7b9381fef';
 export const REPO = 'https://twitter.com/izzzy_xyz';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
