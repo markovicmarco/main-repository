@@ -29,21 +29,21 @@ export default function MoreInfo() {
             <p>Find in-depth information about Izzzy contract and audit.</p>
          </a>
 
-          <a href="https://discord.gg/RMka34MTEC" className={styles.card}
+          <a href="https://www.linkedin.com/company/izzzy" className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
           >
-            <h2>Community &rarr;</h2>
-            <p>Learn about Izzzy in an interactive talk with community!</p>
+            <h2>LinkedIn &rarr;</h2>
+            <p>Learn about Izzzy in the largest professional networking app!</p>
           </a>
 
           <a
-            href="https://izzzy.xyz/mint" className={styles.card} 
+            href="https://github.com/izzzy-xyz" className={styles.card} 
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2>Pre-sale Mint &rarr;</h2>
-            <p>Discover and mint pre-sale non-fungible Izzzy tokens.</p>
+            <h2>Source Code &rarr;</h2>
+            <p>Contribute to the GitHub open source community, review code.</p>
           </a>
 
           <a
