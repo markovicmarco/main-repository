@@ -17,27 +17,27 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import Page from '@components/page';
-import SponsorSection from '@components/sponsor-section';
+import SpeakerSection from '@components/speaker-section';
 import Layout from '@components/layout';
 
-import { getAllSponsors } from '@lib/cms-api';
-import { Sponsor } from '@lib/types';
+import { getAllSpeakers } from '@lib/cms-api';
+import { Speaker } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  sponsor: Sponsor;
+  speaker: Speaker;
 };
 
-export default function SponsorPage({ sponsor }: Props) {
+export default function SpeakerPage({ speaker }: Props) {
   const meta = {
-    title: 'Expo - NFT marketplace built with the best',
+    title: 'Contributors - Community of NFT enthusiast from all around the world',
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <SponsorSection sponsor={sponsor} />
+        <SpeakerSection speaker={speaker} />
       </Layout>
     </Page>
   );
@@ -45,10 +45,10 @@ export default function SponsorPage({ sponsor }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const slug = params?.slug;
-  const sponsors = await getAllSponsors();
-  const sponsor = sponsors.find((s: Sponsor) => s.slug === slug) || null;
+  const speakers = await getAllSpeakers();
+  const currentSpeaker = speakers.find((s: Speaker) => s.slug === slug) || null;
 
-  if (!sponsor) {
+  if (!currentSpeaker) {
     return {
       notFound: true
     };
@@ -56,18 +56,18 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   return {
     props: {
-      sponsor
+      speaker: currentSpeaker
     },
     revalidate: 60
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const sponsors = await getAllSponsors();
-  const slugs = sponsors.map((s: Sponsor) => ({ params: { slug: s.slug } }));
+  const speakers = await getAllSpeakers();
+  const slugs = speakers.map((s: Speaker) => ({ params: { slug: s.slug } }));
 
   return {
     paths: slugs,
-    fallback: 'blocking'
+    fallback: false
   };
 };
