@@ -18,6 +18,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
+import IconLinkedin from './icons/icon-linkedin';
 import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
 
@@ -77,6 +78,21 @@ export default function SpeakerSection({ speaker }: Props) {
             <h2 className={styles['bio-header']}>Bio</h2>
             <p className={styles.bio}>{speaker.bio}</p>
             <h3 className={styles['socials-header']}>Social Media</h3>
+            {speaker.linkedin ? (
+              <a
+                aria-label="LinkedIn"
+                className={styles.IconLinkedin}
+                href={speaker.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconLinkedin width={'24'} />
+              </a>
+            ) : (
+              <span className={cn(styles.IconLinkedin, styles.disabled)}>
+                <IconLinkedin width={'24'}  />
+              </span>
+            )}
             {speaker.twitter ? (
               <a
                 aria-label="Twitter"
