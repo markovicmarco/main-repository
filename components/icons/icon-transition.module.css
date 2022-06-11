@@ -19,6 +19,11 @@
   transition: stroke fill 0.2s ease;
 }
 
+.fill-white {
+  fill: #D8D8D8;
+  transition: stroke fill 0.2s ease;
+}
+
 .stroke-black {
   stroke: black;
   transition: stroke fill 0.2s ease;
