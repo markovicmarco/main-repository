@@ -50,8 +50,8 @@ export const NAVIGATION = [
     route: '/stage/c'
   },
   {
-    name: 'Speakers',
-    route: '/speakers'
+    name: 'Contributors',
+    route: '/contributors'
   },
   {
     name: 'Nfts',
