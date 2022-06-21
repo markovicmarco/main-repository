@@ -1,29 +1,29 @@
 import { ArrowRightIcon } from '@100mslive/react-icons';
-import HmsLogo from '@components/icons/icon-hms';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Button from '../Button';
 import LinkButton from '../LinkButton';
+import IzzzyLogo from '@components/icons/icon-izzzy';
 
 const data = [
   {
-    name: 'Moderator',
-    roleName: 'moderator',
-    role: 'backstage',
-    desc: `This role is meant for the event organisers. The moderator is like a stage admin - can add speakers, remove them, invite attendees on stage, kick them out of the event, etc`
+    name: 'Contributor',
+    roleName: 'contributor',
+    role: 'admin',
+    desc: `This role is meant for the event sponsors. The contributor is like a stage admin - can add moderators, remove them, invite attendees on stage, kick them out of the event, etc`
   },
   {
-    name: 'Speaker',
-    roleName: 'speaker',
-    role: 'stage',
+    name: 'Moderator',
+    roleName: 'moderator',
+    role: 'member',
     desc:
-      'This one is self explanatory. Use this role for folks who are going to be the main guests of the session. Speakers can also invite attendees on the stage, and respond to public chat messages.'
+      'This one is self explanatory. Use this role for folks who are going to be the main guests of the community. Moderators can also invite attendees on the stage, and respond to public chat messages.'
   },
   {
     name: 'Attendee',
     roleName: 'attendee',
     role: 'viewer',
-    desc: `This one is the most basic role - can see and hear whatever is happening on the stage, cannot share their audio and video, and can put up messages on the public chat section.`
+    desc: `This one is the most basic role - can see whatever is happening, participate in airdrops, they cannot get the share of contributors and moderators, and can put up messages on the public chat section.`
   }
 ];
 
@@ -37,7 +37,7 @@ const DemoModal = () => {
   }, [router]);
   return (
     <div className="font-sans">
-      <p className="text-[32px] font-semibold my-0">Take your Webinar for a test drive</p>
+      <p className="text-[32px] font-semibold my-0">Take your membership for a long drive</p>
       <p className="text-gray-300 text-[15px] my-0">
         We have setup a few profiles to make it easy for you or your team to experience each
         perspective. Join in one click or share access with anyone else.
@@ -54,15 +54,15 @@ const DemoModal = () => {
               <p className="text-gray-300 text-xs">{m.desc}</p>
             </div>
             <div className="flex items-center space-x-6">
-              <CopyButton text={`${window.location.host}/stage/${stage || 'a'}?role=${m.role}`} />
-              <LinkButton className="w-[200px]" href={`/stage/${stage || 'a'}?role=${m.role}`}>
+              <CopyButton text={`${window.location.host}/discord/?role=${m.role}`} />
+              <LinkButton className="w-[200px]" href={`/discord/?role=${m.role}`}>
                 Join as {m.name} <ArrowRightIcon height={20} />
               </LinkButton>
             </div>
           </div>
         ))}
         <div className="flex items-center justify-center mt-4 ">
-          Powered by <HmsLogo />
+          Powered by <IzzzyLogo className='m-2' /> izzzy
         </div>
       </div>
     </div>

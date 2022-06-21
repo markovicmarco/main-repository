@@ -61,7 +61,7 @@ const Chat = () => {
                 <ChatIcon className="md:w-[50px] md:h-[50px] h-[30px] w-[30px]" />
               </div>
               <p>
-                Welcome to the Webinar. You can engage with the speaker and other participants
+                Welcome to the Webinar. You can engage with the moderator and other participants
                 through the chat below.
               </p>
             </div>
@@ -98,7 +98,7 @@ const Badge: React.FC<{ isMod?: boolean; isLocal: boolean }> = ({ isMod = false,
           You <span className="w-1 h-1 mx-1 rounded-full bg-foreground" />
         </>
       ) : null}{' '}
-      {isMod ? 'Moderator' : 'Speaker'}
+      {isMod ? 'Contributor' : 'Moderator'}
     </div>
   );
 };

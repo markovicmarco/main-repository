@@ -17,7 +17,7 @@ const RoomCta = () => {
       stageId = router.query.slug as string;
     }
     navigator.clipboard.writeText(
-      `${window.location.host}/stage/${stageId}?role=${role?.name || 'viewer'}`
+      `${window.location.host}/discord/?role=${role?.name || 'viewer'}` 
     );
     if (!copied) {
       setCopied(true);
@@ -43,7 +43,7 @@ const RoomCta = () => {
       <ChangeRoleDialog>
         <Button className='className="h-[40px]"' variant="secondary">
           <PersonIcon height={20} className="mr-2" />
-          Change Role
+          Role
         </Button>
       </ChangeRoleDialog>
     </div>

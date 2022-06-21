@@ -22,7 +22,7 @@ import { useEffect, useState } from "react";
 import styles from "./minting-page.module.css";
 
 // Put Your NFT Drop Contract address from the dashboard here
-const myNftDropContractAddress = "0x322067594DBCE69A9a9711BC393440aA5e3Aaca1";
+const myNftDropContractAddress = "0xBA5dcA17a2B11Dd29f93D0f1dD37D1283109feD9";
 
 const Minting: NextPage = () => {
   const nftDrop = useNFTDrop(myNftDropContractAddress);
@@ -69,7 +69,7 @@ const Minting: NextPage = () => {
     }
 
     if (isOnWrongNetwork) {
-      switchNetwork && switchNetwork(ChainId.Mumbai);
+      switchNetwork && switchNetwork(ChainId.Rinkeby);
       return;
     }
 
