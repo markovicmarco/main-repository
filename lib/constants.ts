@@ -26,8 +26,8 @@ export const META_DESCRIPTION =
 export const SITE_DESCRIPTION =
   'An interactive blockchain online experience by the community.';
 export const DATE = '15 June 2022';
-export const SHORT_DATE = 'Jun 15 - 9:00am PST';
-export const FULL_DATE = 'Jun 15th 9am Pacific Time (GMT-7)';
+export const SHORT_DATE = 'Jun 30 - 9:00am PST';
+export const FULL_DATE = 'Jun 30th 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
@@ -42,7 +42,7 @@ export const REPO = 'https://twitter.com/izzzy_xyz';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Mint',
+    name: 'Minting',
     route: '/mint'
   },
   {
@@ -54,7 +54,7 @@ export const NAVIGATION = [
     route: '/contributors'
   },
   {
-    name: 'Nfts',
+    name: 'Listing',
     route: '/nfts'
   },
   {
