@@ -84,7 +84,7 @@ export default function SpeakerSection({ speaker }: Props) {
                 className={styles.IconLinkedin}
                 href={speaker.linkedin}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer" 
               >
                 <IconLinkedin width={'24'} />
               </a>
