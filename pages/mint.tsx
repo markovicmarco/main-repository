@@ -18,9 +18,12 @@
 import Page from '@components/page';
 import Layout from '@components/layout';
 import Minting from '@components/thirdweb/minting-page';
-
 import { META_DESCRIPTION } from '@lib/constants';
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
+
+// This is the chainId your dApp will work on.
+const activeChainId = ChainId.Mainnet;
 
 export default function Mint() {
   const meta = {
@@ -29,11 +32,13 @@ export default function Mint() {
   };
 
   return (
-    <Page meta={meta}>
+    <ThirdwebProvider desiredChainId={activeChainId}>
+     <Page meta={meta}>
       <Layout>
-        <Minting children={meta} />
+        <Minting children={meta}/>
       </Layout>
-    </Page>
+     </Page>
+    </ThirdwebProvider>
   );
 }
 

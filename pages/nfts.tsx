@@ -24,7 +24,7 @@
  import { ChainId } from '@thirdweb-dev/sdk';
  
  // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Rinkeby;
+const activeChainId = ChainId.Mainnet;
  
  export default function Nfts() {
    const meta = {
