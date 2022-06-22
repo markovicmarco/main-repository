@@ -17,7 +17,7 @@
  import cn from 'classnames';
  import VercelLogo from '@components/icons/icon-platform';
  import styles from './footer.module.css';
- import { COPYRIGHT_HOLDER, SITE_NAME, SMART_CONTRACT, LEGAL_URL, REPO } from '@lib/constants';
+ import { COPYRIGHT_HOLDER, SITE_NAME, WHITEPAPER, SMART_CONTRACT, LEGAL_URL, REPO } from '@lib/constants';
  
  export function HostedByVercel() {
    return (
@@ -54,6 +54,17 @@
                rel="noopener noreferrer"
              >
                Twitter
+             </a>
+           </p>
+           <div className={styles['footer-separator']} />
+           <p className={styles['footer-paragraph']}>
+             <a
+               href={WHITEPAPER}
+               className={styles['footer-link']}
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               Whitepaper
              </a>
            </p>
            <div className={styles['footer-separator']} />
