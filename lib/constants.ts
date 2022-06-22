@@ -25,9 +25,9 @@ export const META_DESCRIPTION =
   'Ethereum NFT project. Made through the collaboration of creators, designers, and developers by the crypto community!';
 export const SITE_DESCRIPTION =
   'An interactive blockchain online experience by the community.';
-export const DATE = '30 June 2022';
-export const SHORT_DATE = 'Jun 30 - 9:00am PST';
-export const FULL_DATE = 'Jun 30th 9am Pacific Time (GMT-7)';
+export const DATE = '15 June 2022';
+export const SHORT_DATE = 'Jun 15 - 9:00am PST';
+export const FULL_DATE = 'Jun 15th 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
