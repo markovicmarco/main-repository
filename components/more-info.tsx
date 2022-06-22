@@ -56,6 +56,16 @@ export default function MoreInfo() {
               Instantly access to exclusive Izzzy community token.
             </p>
           </a>
+          <a
+            href="https://drive.google.com/file/d/1cXPnMUF3pBui7Obw6OiV87V8YVNZRb-N/view?usp=sharing" className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2>Whitepaper &rarr;</h2>
+            <p>
+              Document that explains released purpose of the project.
+            </p>
+          </a>
         </div>
       </main>
     </div>
