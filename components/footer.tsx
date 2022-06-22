@@ -59,17 +59,6 @@
            <div className={styles['footer-separator']} />
            <p className={styles['footer-paragraph']}>
              <a
-               href='https://drive.google.com/file/d/1cXPnMUF3pBui7Obw6OiV87V8YVNZRb-N/view?usp=sharing'
-               className={styles['footer-link']}
-               target="_blank"
-               rel="noopener noreferrer"
-             >
-               Whitepaper
-             </a>
-           </p>
-           <div className={styles['footer-separator']} />
-           <p className={styles['footer-paragraph']}>
-             <a
                href={SMART_CONTRACT}
                className={styles['footer-link']}
                target="_blank"
@@ -98,4 +87,6 @@
      </footer>
    );
  }
+ 
+
  
