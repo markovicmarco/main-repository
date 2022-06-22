@@ -19,7 +19,6 @@ import * as strapiApi from './cms-providers/strapi';
 import * as agilityApi from './cms-providers/agility';
 import * as datoCmsApi from './cms-providers/dato';
 import * as contentfulApi from './cms-providers/contentful';
-import * as prismicApi from './cms-providers/prismic';
 import * as storyblokApi from './cms-providers/storyblok';
 
 let cmsApi: {
@@ -35,8 +34,6 @@ if (process.env.DATO_API_TOKEN) {
   cmsApi = contentfulApi;
 } else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
   cmsApi = storyblokApi;
-} else if (process.env.PRISMIC_REPO_ID) {
-  cmsApi = prismicApi;
 } else if (
   process.env.AGILITY_GUID &&
   process.env.AGILITY_API_FETCH_KEY &&
